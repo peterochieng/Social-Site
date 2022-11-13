@@ -17,7 +17,7 @@ import ThreePIcon from '@mui/icons-material/ThreeP';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import React from "react";
 
-const Sidebar = (props) => {
+const Sidebar = ({mode, setMode}) => {
   return (
     <Box
       flex={1}
@@ -87,7 +87,7 @@ const Sidebar = (props) => {
             <ListItemIcon>
               <Brightness4Icon />
             </ListItemIcon>
-            <Switch/>
+            <Switch onChange={e=> setMode(mode === 'light' ? 'dark' : 'light')}/>
           </ListItemButton>
         </ListItem>
       </List>
